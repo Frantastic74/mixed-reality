@@ -1,130 +1,72 @@
 ---
-title: Interaction fundamentals
-description: As we've built experiences across HoloLens (1st gen), HoloLens 2 and immersive headsets, we've started writing down some things we found useful to share. 
-author: rwinj
-ms.author: jennyk
-ms.date: 02/24/2019
+title: Interaction Multimodal overview
+description: Overview of the multimodal interaction
+author: shengkait
+ms.author: shengkait
+ms.date: 04/11/2019
 ms.topic: article
-keywords: Mixed Reality, interaction, design
+keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hololens, MMR, multimodal 
 ---
 
+# Introducing instinctual interactions
 
+The philosophy of simple, instinctual interactions is woven throughout the Microsoft Mixed Reality (MMR) platform, from hardware to software.
 
-# Interaction fundamentals
+These instinctual interactions utilize all available input technologies, including inside-out tracking, hand tracking, eye tracking, and natural language, in seamless multimodal interaction models. Based on our research, designing and developing multimodals, and not based on single inputs, is critical when creating instinctive experiences.
 
-As we've built experiences across HoloLens and immersive headsets, we've started writing down some things we found useful to share. Think of these as the fundamental building blocks for mixed reality interaction design.
+The Instinctual Interaction models also naturally align across device types.  For example, far interaction on an immersive headset with a 6 degrees of freedom (DoF) controller and far interaction on a HoloLens 2 use the same affordances, patterns, and behaviors.  Not only is this convenient for developers and designers, but it feels natural to end users.
 
-## Device support
+We've structures our guidance to reflect this philosophy: that the most instinctual interaction models are multimodal, and that interaction is consistent across device types and whether users are using controllers or not.
 
-Here's an outline of the available Interaction design articles and which device type or types they apply to.
-<br>
+## Multimodal interaction models
 
-<table>
+Based on our research and work with customers to date, we've discovered three primary interaction models that suit the majority of Mixed Reality experiences.  
 
-<th>
-<tr>
+Think of these interaction models as the user's mental model for completing their flows.
 
-<td style="width:150px;"><strong>Input</strong></td>
-<td style="width:150px; text-align: center;"><a href="hololens-hardware-details.md"><strong>HoloLens (1st gen)</strong></a></td>
-<td style="width:150px; text-align: center;"><strong>HoloLens 2</strong></td>
-<td style="width:150px; text-align: center;"><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
-</tr>
-</th>
- 
-<tr>
-<td> <a href="gestures.md">Articulated hands</a></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td><td></td>
+| [Hands and Tools](https://review.docs.microsoft.com/en-us/windows/mixed-reality/hands-and-tools?branch=master) | [Hands free](https://review.docs.microsoft.com/en-us/windows/mixed-reality/hands-free?branch=master) | [Gaze and Commit](https://review.docs.microsoft.com/en-us/windows/mixed-reality/gaze-and-commit?branch=master) |
+| --- | --- | --- |
 
-</tr><tr>
-<td> <a href="gaze-targeting.md">Eye targeting</a></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td><td style="text-align: center;"></td>
-</tr><tr>
-<td> <a href="gaze-targeting.md">Gaze targeting</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="gestures.md">Gestures</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="voice-design.md">Voice design</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> Gamepad</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr>
-<tr>
-<td> <a href="motion-controllers.md">Motion controllers</a></td><td></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td>
+Each of these interaction models is convenient, powerful, and usable in its own right, and all are optimized for a set of customer needs. View the chart below, for scenarios, examples, and benefits of each interaction model.  
 
-</tr>
-<th>
-<tr>
-<td style="width:150px;"><strong>Perception and spatial features</strong></td>
-<td style="width:150px; text-align: center;"><a href="hololens-hardware-details.md"><strong>HoloLens (1st gen)</strong></a></td>
-<td style="width:150px; text-align: center;"><strong>HoloLens 2</strong></td>
-<td style="width:150px; text-align: center;"><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
-</tr>
-</th>
-<tr>
+**Model** | **Hands and Tools** | **Hands-free** | **Gaze and Commit**
+|--------- | --------------| ------------| ---------|
+**Example Scenarios** | 3D spatial experiences, e.g. spatial layout and design, content manipulation, or simulation | Contextual experiences where a user's hands are occupied, e.g. on the-job learning, maintenance| Click-through experiences, e.g. 3D presentations, demos
+**Fit** | Great for new users, coupled wit voice, eye tracking or head gaze. Low learning curve. Consistent UX across hand tracking and 6 DoF controllers. | Some learning required. If hands are unavailable pairs well with voice and natural language | Requires training on HMDs but not on mobile. Best for accessible controllers Best for HoloLens (1st gen) |
+**Hardware** | HoloLens 2 Immersive headsets | HoloLens 2 HoloLens (1st gen) Immersive headsets | HoloLens 2 Immersive headsets | HoloLens 2 HoloLens (1st gen) Immersive headsets Mobile AR |
 
-<td> <a href="spatial-sound-design.md">Spatial sound design</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping-design.md">Spatial mapping design</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="hologram.md">Holograms</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr>
+Detailed information for using all available inputs seamlessly together in each interaction model is on the pages that follow, as well as illustrations and links to sample content from our Unity MRTK.
 
-</table>
+## Choose an interaction model for your customer
 
-## The user is the camera
+Most likely, developers and creators also already have some ideas in mind of the kinds of interaction experience they want their users to have.
 
-![User is the camera](images/useriscamera-640px.jpg)
+Even so, to encourage a customer-focused approach to design, we recommend a look at the guidance outlined in the next article, [Choosing interaction for your customer](coming-soon.md)
 
-Always think about design for your user's point of view as they move about their real and virtual worlds.
+This article outlines some of the tips and tricks we've learned to keep users confident in different scenarios.
 
-**Some questions to ask**
-* Is the user sitting, reclining, standing, or walking while using your experience?
-* How does your content adjust to different positions?
-* Can the user adjust it?
-* Will the user be comfortable using your app?
+> **Note**: Check out the [Customer-focused creative process](coming-soon.md) section for suggestions on identifying your customer and creating a great Mixed Reality concept.
 
-**Best practices**
-* The user is the camera and they control the movement. Let them drive.
-* If you need to virtually transport the user, be sensitive to issues around vestibular discomfort.
-* Use shorter animations
-* Animate from down/left/right or fade in instead of Z
-* Slow down timing
-* Allow user to see the world in the background
+## Transition interaction models
 
-**What to avoid**
-* Don't shake the camera or purposely lock it to 3DOF (only orientation, no translation), it can make users feel uncomfortable.
-* No abrupt movement. If you need to bring content to or from the user, move it slowly and smoothly toward them for maximum comfort. Users will react to large menus coming at them.
-* Don't accelerate or turn the user's camera. Users are sensitive to acceleration (both angular and translational).
+There are also cases where customer or use cases require that your experience work with more than one interaction model – for example, if the core interaction model is Hands and tools, but a special Hands-free mode is required for field technicians.  
 
-## Leverage the user's perspective
+If your experience does require multiple interaction models, we've found that many end users may encounter difficulty transitioning from one model to another -- especially end users who are new to mixed reality.
 
-Users see the world of mixed reality through displays on immersive and holographic devices. On the HoloLens, this display is called the [holographic frame](holographic-frame.md).
+To help guide designers and developers through choices that can be difficult in mixed reality, we've also included guidance on using multiple interaction models in the Transitioning interaction models article below.
 
-In 2D development, frequently accessed content and settings may be placed in the corners of a screen to make them easily accessible. However, in holographic apps, content in the corners of the user's view may be uncomfortable to access. In this case, the center of the holographic frame is the prime location for content.
+> [!Note]
+> Utilizing multiple interaction models in a single application can create difficulties for end users.  Please check out our guidance in the article [Transitioning interaction models](coming-soon.md).
 
-The user may need to be guided to help locate important events or objects beyond their immediate view. You can use arrows, light trails, character head movement, thought bubbles, pointers, spatial sound, and voice prompts to help guide the user to important content in your app.
+## Next section: visual design language
 
-It is recommended to not lock content to the screen for the user's comfort. If you need to keep content in view, place it in the world and make the content "tag-along" like the Start menu. Content that gets pulled along with the user's perspective will feel more natural in the environment.
-
-![The start menu follows the user's view when it reaches the edge of the frame](images/tagalong-1000px.jpg)<br>
-*The Start menu follows the user's view when it reaches the edge of the frame*
-
-On HoloLens, holograms feel real when they fit within the holographic frame since they don't get cut off. Users will move in order to see the bounds of a hologram within the frame. On HoloLens, it's important to simplify your UI to fit within the user's view and keep your focus on the main action. For immersive headsets, it's important to maintain the illusion of a persistent virtual world within the device's field of view.
-
-## User comfort
-
-To ensure maximum [comfort](comfort.md) on head-mounted displays, it’s important for designers and developers to create and present content in a way that mimics how humans interpret 3D shapes and the relative position of objects in the natural world. From a physical perspective, it is also important to design content that does not require fatiguing motions of the neck or arms.
-
-Whether developing for HoloLens or immersive headsets, it is important to render visuals for both eyes. Rendering a heads-up display in one eye only can make an interface hard to understand, as well as causing uneasiness to the user's eye and brain.
-
-## Share your experience
-
-Using [mixed reality capture](mixed-reality-capture.md), users can capture a photo or video of their experience at any time. Consider experiences in your app where you may want to encourage snapshots or videos.
-
-## Leverage basic UI elements of the Windows Mixed Reality home
-
-Just like the Windows PC experience starts with the desktop, Windows Mixed Reality starts with the home. The [Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md) leverages our innate ability to understand and navigate 3D places. With HoloLens, your home is your physical space. With immersive headsets, your home is a virtual place.
-
-Your home is also where you’ll use the Start menu to open and place apps and content. You can fill your home with mixed reality content and multitask by using multiple apps at the same time. The things you place in your home stay there, even if you restart your device.
+Click the link below or follow the page navigation to continue to the next section on [Visual design language](coming-soon.md).
 
 ## See also
+
+* [Gaze and commit](gaze-and-commit.md)
+* [Direct manipulation](direct-manipulation.md)
+* [Point and commit](point-and-commit.md)
 * [Gaze targeting](gaze-targeting.md)
 * [Gestures](gestures.md)
 * [Voice design](voice-design.md)
@@ -132,4 +74,3 @@ Your home is also where you’ll use the Start menu to open and place apps and c
 * [Spatial sound design](spatial-sound-design.md)
 * [Spatial mapping design](spatial-mapping-design.md)
 * [Comfort](comfort.md)
-* [Navigating the Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md)
